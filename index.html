@@ -127,14 +127,16 @@
           <label for="textarea">Additional thoughts or wild card ideas:</label>
           <textarea id="textarea" placeholder="Make the cards talk? Add dragons?"></textarea><br><br>
 
-          <label for="priority">How important was this meeting?</label>
-          <input list="priority" name="priority-list" id="priority">
-          <datalist id="priority">
+          <label for="priority-input">How important was this meeting?</label>
+          <input list="priority-list" name="priority-list" id="priority-input">
+          
+          <datalist id="priority-list">
             <option value="Legendary">
             <option value="Epic">
             <option value="Rare">
             <option value="Common">
-          </datalist><br><br>
+          </datalist>
+              <br><br>
 
           <label for="theme">Which theme do you prefer?</label>
           <select name="theme" id="theme">
