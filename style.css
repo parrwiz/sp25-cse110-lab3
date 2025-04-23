@@ -35,6 +35,8 @@
   }
   /*header section*/
   header {
+     /* fallback */
+    background-color: rgb(210, 220, 230);
     background-color: color-mix(in srgb, var(--primary-color) 30%, rgb(230, 207, 207));
     padding: 15px 20px;
     border-radius: 8px 8px 0 0;
@@ -60,7 +62,7 @@
   }
   
   h3 {
-    font-size: 1.2rem;
+    font-size: 15pt;
     color: grey;
   }
   
@@ -114,7 +116,7 @@
     border-radius: 10px;
     border-style: solid;
     border-color: transparent;
-    border-width: pt;
+    border-width: 2px;
     transition: border-color 0.3s ease-in-out;
   }
   
