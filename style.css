@@ -12,8 +12,8 @@
     --nav-bg-color: white;
     --wider-gamut-example: color(display-p3 0.1 0.8 0.1);
     /*Custom CSS property*/
-    --fun-hover-color: color-mix(in srgb, var(--primary-color) 50%, white);
-  }
+    --accent-hover: color-mix(in srgb, var(--primary-color) 40%, white);
+}
 /*Reset default spacing and use predictable box sizing.*/
   * {
     box-sizing: border-box;
@@ -183,7 +183,6 @@
   }
 details:hover {
     background-color: rgb(240, 240, 240);
-    background-color: var(--fun-hover-color); 
   }
   summary {
     cursor: pointer;
@@ -249,7 +248,8 @@ details:hover {
   }
   
   button:hover {
-    background-color: #2a52a2;
+    --accent-hover: color-mix(in srgb, var(--primary-color) 40%, white);
+
   }
   
   button:active {
