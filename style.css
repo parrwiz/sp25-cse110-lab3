@@ -11,17 +11,8 @@
     --container-max-width: 960px;
     --nav-bg-color: white;
     --wider-gamut-example: color(display-p3 0.1 0.8 0.1);
-    --header-bg: rgb(210, 220, 230); /* fallback */
-}
-
-/* Override using color-mix in browsers that support it */
-@supports (background-color: color-mix(in srgb, black 10%, white)) {
-  :root {
-    --header-bg: color-mix(in srgb, var(--primary-color) 30%, rgb(230, 207, 207));
+    --fun-hover-color: color-mix(in srgb, var(--primary-color) 50%, white);
   }
-}
-
-
 /*Reset default spacing and use predictable box sizing.*/
   * {
     box-sizing: border-box;
@@ -45,13 +36,13 @@
   }
   /*header section*/
   header {
-     /* fallback */
-     background-color: var(--header-bg);
-      padding: 15px 20px;
+
+    background-color: rgb(210, 220, 230);
+    padding: 15px 20px;
     border-radius: 8px 8px 0 0;
     border-bottom: 3px solid var(--primary-color);
   }
-  
+  /* heading spacing + align */
   h1, h2, h3 {
     margin-top: 0.5em;
     margin-bottom: 0.3em;
@@ -59,7 +50,8 @@
     margin-right: 0;
     text-align: center;
   }
-  
+  /* heading sizes + colors */
+
   h1 {
     color: var(--primary-color, navy);
     font-size: 2.5rem;
@@ -71,10 +63,11 @@
   }
   
   h3 {
-    font-size: 15pt;
+    font-size: 12pt;
     color: grey;
   }
-  
+  /* nav bar */
+
   nav {
     display: flex;
     justify-content: center;
@@ -90,7 +83,8 @@
     z-index: 100;
     border-bottom: 1px solid #fc0101;
   }
-  
+  /* nav links */
+
   nav a {
     text-decoration: none;
     font-weight: bold;
@@ -99,7 +93,8 @@
     border-radius: 4px;
     transition: background-color 0.3s, color 0.3s;
   }
-  
+  /* nav hover + active states */
+
   nav a:hover {
     background-color: var(--primary-color);
     color: white;
@@ -110,13 +105,15 @@
     background-color: darkblue;
     color: #eee;
   }
-  
+  /* section spacing */
+
   hr {
     border: 0;
     height: 1px;
     background-color: #ccc;
     margin: 25px 0;
   }
+/* section box styling */
   
   section {
     padding: 20px;
@@ -168,7 +165,8 @@
     border-width: 0.1cm;
     border-radius: 10px;
   }
-  
+  /* audio + video layout */
+
   #media audio, #media video {
     display: block;
     margin: 15px auto;
@@ -182,7 +180,9 @@
     padding: 10px;
     background-color: #f9f9f9;
   }
-  
+details:hover {
+    background-color: var(--fun-hover-color);
+  }
   summary {
     cursor: pointer;
     font-weight: bold;
@@ -207,7 +207,8 @@
     margin-bottom: 5px;
     margin-top: 10px;
   }
-  
+  /* input + select box style */
+
   input[type="text"],
   input[type="date"],
   textarea,
@@ -264,12 +265,14 @@
     text-align: center;
     font-size: 0.9rem;
   }
-  
+  /* label turns green if checkbox checked */
+
   label:has(input[type="checkbox"]:checked) {
     color: darkgreen;
     font-weight: bold;
   }
-  
+  /* fieldset border when yes selected */
+
   fieldset:has(input[name="productive"]#yes:checked) {
     border-color: darkgoldenrod;
   }
@@ -301,7 +304,8 @@
   section#new ul li strong {
     color: #d84315;
   }
-  
+  /* tablet responsive layout */
+
   @media (max-width: 768px) {
     body {
       font-size: 15px;
@@ -343,7 +347,8 @@
       padding: 10px;
     }
   }
-  
+  /* phone responsive layout */
+
   @media (max-width: 480px) {
     body {
       font-size: 14px;
@@ -366,11 +371,13 @@
       font-size: 1.4rem;
     }
   }
-  
+  /* div styling for attendance */
+
   .firstclass {
     position: relative;
   }
-  
+  /* inline <em> style */
+
   em {
     display: inline;
     font-style: italic;
