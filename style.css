@@ -11,6 +11,7 @@
     --container-max-width: 960px;
     --nav-bg-color: white;
     --wider-gamut-example: color(display-p3 0.1 0.8 0.1);
+    /*Custom CSS property*/
     --fun-hover-color: color-mix(in srgb, var(--primary-color) 50%, white);
   }
 /*Reset default spacing and use predictable box sizing.*/
@@ -181,7 +182,8 @@
     background-color: #f9f9f9;
   }
 details:hover {
-    background-color: var(--fun-hover-color);
+    background-color: rgb(240, 240, 240);
+    background-color: var(--fun-hover-color); 
   }
   summary {
     cursor: pointer;
