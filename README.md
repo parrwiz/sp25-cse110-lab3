@@ -1,10 +1,10 @@
-# Lab 2  URL: https://parrwiz.github.io/Lab2_Starter/
+# Lab 2  URL: https://parrwiz.github.io/sp25-cse110-lab3/
 
 ## 📝 Project Overview
 
-- **Project Name**: Card Clash 
+- **Project Name**: CardS
 - **Course**: CSE 110
-- **Assignment**: Lab 2 
+- **Assignment**: Lab 3 
 - **Author**: Parwiz
-- **Date**: April 15, 2025
+- **Date**: April 22, 2025
 

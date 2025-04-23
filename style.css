@@ -1,0 +1,368 @@
+/*Inter fonts for nice UI */
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;600&display=swap');
+
+/* Since we are goin go be using the colors a lot, I will add them as variables for better scalalibility and efficiency */
+/*all of the color requirements here except for the color mix which i added to header*/
+:root {
+    --primary-color: #6B4F4F;
+    --secondary-color: hsla(35, 40%, 50%, 0.9);
+    --text-color-dark: rgb(51, 51, 51);
+    --base-font-size: 16px;
+    --container-max-width: 960px;
+    --nav-bg-color: white;
+    --wider-gamut-example: color(display-p3 0.1 0.8 0.1);
+  }
+/*Reset default spacing and use predictable box sizing.*/
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  /*this is the body tag*/
+  body {
+    background-color: rgb(119, 112, 82); 
+    font-family: 'Work Sans', sans-serif;
+    font-size: var(--base-font-size);
+    color: var(--text-color-dark);
+    line-height: 1.6em;
+  }
+  /*main content section */
+  main {
+    margin: 20px auto;
+    max-width: var(--container-max-width);
+    width: 90vw;
+    
+  }
+  /*header section*/
+  header {
+    background-color: color-mix(in srgb, var(--primary-color) 30%, rgb(230, 207, 207));
+    padding: 15px 20px;
+    border-radius: 8px 8px 0 0;
+    border-bottom: 3px solid var(--primary-color);
+  }
+  
+  h1, h2, h3 {
+    margin-top: 0.5em;
+    margin-bottom: 0.3em;
+    margin-left: 0;
+    margin-right: 0;
+    text-align: center;
+  }
+  
+  h1 {
+    color: var(--primary-color, navy);
+    font-size: 2.5rem;
+  }
+  
+  h2 {
+    font-size: 1.8rem;
+    color: var(--text-color-dark);
+  }
+  
+  h3 {
+    font-size: 1.2rem;
+    color: grey;
+  }
+  
+  nav {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    background-color: var(--nav-bg-color);
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 5px;
+    padding-right: 5px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    border-bottom: 1px solid #fc0101;
+  }
+  
+  nav a {
+    text-decoration: none;
+    font-weight: bold;
+    color: rgba(0, 0, 150, 0.8);
+    padding: 5px 10px;
+    border-radius: 4px;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  nav a:hover {
+    background-color: var(--primary-color);
+    color: white;
+    text-decoration: underline;
+  }
+  
+  nav a:active {
+    background-color: darkblue;
+    color: #eee;
+  }
+  
+  hr {
+    border: 0;
+    height: 1px;
+    background-color: #ccc;
+    margin: 25px 0;
+  }
+  
+  section {
+    padding: 20px;
+    margin: 15px 0;
+    background-color: rgb(206, 213, 216);
+    border-radius: 10px;
+    border-style: solid;
+    border-color: transparent;
+    border-width: pt;
+    transition: border-color 0.3s ease-in-out;
+  }
+  
+  section#attendance ul {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 10px;
+    grid-auto-rows: auto;
+    list-style: none;
+    padding-left: 0;
+  }
+  
+  span#id {
+    font-weight: bold;
+    display: inline-block;
+    margin-right: 5px;
+    color: #555;
+  }
+  
+  header > h1 {
+    color: darkslategray;
+  }
+  
+  h2 + ul, h2 + ol {
+    margin-top: 10px;
+  }
+  
+  hr ~ section {
+    border-top: 2px solid #eee;
+  }
+  
+  #media img {
+    width: 500px;
+    height: auto;
+    max-width: 100%;
+    display: block;
+    margin: 10px auto;
+    border-style: groove;
+    border-color: var(--secondary-color);
+    border-width: 0.1cm;
+    border-radius: 10px;
+  }
+  
+  #media audio, #media video {
+    display: block;
+    margin: 15px auto;
+    max-width: 100%;
+  }
+  
+  details {
+    margin-top: 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 10px;
+    background-color: #f9f9f9;
+  }
+  
+  summary {
+    cursor: pointer;
+    font-weight: bold;
+    color: var(--wider-gamut-example, darkgreen);
+  }
+  
+  fieldset {
+    border: 1px dashed green;
+    padding: 15px;
+    margin-top: 10px;
+    border-radius: 5px;
+  }
+  
+  legend {
+    font-weight: bold;
+    padding: 0 5px;
+    color: green;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 5px;
+    margin-top: 10px;
+  }
+  
+  input[type="text"],
+  input[type="date"],
+  textarea,
+  select,
+  input[list] {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 15px;
+    
+  }
+  
+  input[type="checkbox"], input[type="radio"] {
+    margin-right: 5px;
+  }
+  
+  textarea {
+    min-width: 250px;
+    min-height: 80px;
+    resize: vertical;
+  }
+  
+  button {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    margin-top: 10px;
+  }
+  
+  button:hover {
+    background-color: #2a52a2;
+  }
+  
+  button:active {
+    background-color: #1a3366;
+  }
+  
+  footer {
+    margin-top: 30px;
+    margin-bottom: 0;
+    margin-left: 0;
+    margin-right: 0;
+    padding: 15px;
+    background-color: hsla(210, 20%, 30%, 0.9);
+    color: white;
+    text-align: center;
+    font-size: 0.9rem;
+  }
+  
+  label:has(input[type="checkbox"]:checked) {
+    color: darkgreen;
+    font-weight: bold;
+  }
+  
+  fieldset:has(input[name="productive"]#yes:checked) {
+    border-color: darkgoldenrod;
+  }
+  
+  section#new {
+    background-color: #e0f7fa;
+  }
+  
+  section#new h2 {
+    color: #00796b;
+  }
+  
+  section#new ul {
+    list-style-type: '💡 ';
+    margin-left: 25px;
+  }
+  
+  section#new ul li {
+    margin-bottom: 8px;
+    font-style: normal;
+  }
+  
+  section#new ul li:hover {
+    font-style: italic;
+    cursor: default;
+  }
+  
+  section#new ul li b,
+  section#new ul li strong {
+    color: #d84315;
+  }
+  
+  @media (max-width: 768px) {
+    body {
+      font-size: 15px;
+    }
+    
+  
+    h1 {
+      font-size: 2rem;
+    }
+  
+    h2 {
+      font-size: 1.6rem;
+    }
+  
+    nav {
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+    }
+  
+    #attendance ul {
+      grid-template-columns: 1fr;
+    }
+  
+    #media img {
+      width: 95%;
+    }
+  
+    main {
+      width: 95%;
+    }
+  
+    input[type="text"],
+    input[type="date"],
+    textarea,
+    select,
+    input[list],
+    button {
+      padding: 10px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    body {
+      font-size: 14px;
+    }
+  
+    header, section, footer, main {
+      padding: 10px;
+    }
+  
+    main {
+      width: 98%;
+      margin-top: 10px;
+    }
+  
+    h1 {
+      font-size: 1.8rem;
+    }
+  
+    h2 {
+      font-size: 1.4rem;
+    }
+  }
+  
+  .firstclass {
+    position: relative;
+  }
+  
+  em {
+    display: inline;
+    font-style: italic;
+    color: #555;
+  }
+  
