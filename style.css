@@ -11,7 +11,17 @@
     --container-max-width: 960px;
     --nav-bg-color: white;
     --wider-gamut-example: color(display-p3 0.1 0.8 0.1);
+    --header-bg: rgb(210, 220, 230); /* fallback */
+}
+
+/* Override using color-mix in browsers that support it */
+@supports (background-color: color-mix(in srgb, black 10%, white)) {
+  :root {
+    --header-bg: color-mix(in srgb, var(--primary-color) 30%, rgb(230, 207, 207));
   }
+}
+
+
 /*Reset default spacing and use predictable box sizing.*/
   * {
     box-sizing: border-box;
@@ -36,9 +46,8 @@
   /*header section*/
   header {
      /* fallback */
-    background-color: rgb(210, 220, 230);
-    background-color: color-mix(in srgb, var(--primary-color) 30%, rgb(230, 207, 207));
-    padding: 15px 20px;
+     background-color: var(--header-bg);
+      padding: 15px 20px;
     border-radius: 8px 8px 0 0;
     border-bottom: 3px solid var(--primary-color);
   }
