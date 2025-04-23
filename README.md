@@ -1,4 +1,4 @@
-# Lab 2  URL: https://parrwiz.github.io/sp25-cse110-lab3/
+# Lab 3  URL: https://parrwiz.github.io/sp25-cse110-lab3/
 
 ## 📝 Project Overview
 
